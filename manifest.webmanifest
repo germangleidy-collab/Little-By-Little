@@ -1,0 +1,21 @@
+
+{
+  "id": "./",
+  "name": "Little by Little",
+  "short_name": "Little by Little",
+  "description": "A cozy little space to focus, study, and grow.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff6f8",
+  "theme_color": "#f8e7ee",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
