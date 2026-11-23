@@ -415,7 +415,7 @@ function downloadBackup() {
   const backup = {
     app: "Little by Little",
     version: 1,
-    subjects: JSON.parse(localStorage.getItem("subjects") || "[]"),
+    subjects: subjects,
     studyRecords: JSON.parse(localStorage.getItem("studyRecords") || "[]"),
     date: new Date().toISOString()
   };
