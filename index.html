@@ -155,7 +155,22 @@ footer {text-align:center;padding:20px;color:var(--muted);font-size:.8rem}
     <div id="history">Your completed sessions will appear here.</div>
   </section>
 </main>
+<section class="card">
+  <h2>🛡️ Protect your progress</h2>
+  <p>Keep your little accomplishments safe. ♡</p>
 
+  <div class="buttons">
+    <button onclick="downloadBackup()">Download backup ♡</button>
+    <button class="secondary" onclick="document.getElementById('backupFile').click()">
+      Restore backup
+    </button>
+  </div>
+
+  <input id="backupFile" type="file" accept=".json,application/json"
+    style="display:none" onchange="restoreBackup(event)">
+
+  <p id="backupMessage"></p>
+</section>
 <footer>Made with love, one little step at a time ♡</footer>
 
 <script>
@@ -396,6 +411,66 @@ function renderStats() {
     "Your completed sessions will appear here.";
 }
 
+function downloadBackup() {
+  const backup = {
+    app: "Little by Little",
+    version: 1,
+    subjects: JSON.parse(localStorage.getItem("subjects") || "[]"),
+    studyRecords: JSON.parse(localStorage.getItem("studyRecords") || "[]"),
+    date: new Date().toISOString()
+  };
+
+  const file = new Blob(
+    [JSON.stringify(backup, null, 2)],
+    { type: "application/json" }
+  );
+
+  const url = URL.createObjectURL(file);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "little-by-little-backup.json";
+  link.click();
+  URL.revokeObjectURL(url);
+
+  $("backupMessage").textContent = "Your backup is ready! ♡";
+}
+
+function restoreBackup(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  reader.onload = function() {
+    try {
+      const backup = JSON.parse(reader.result);
+
+      if (
+        backup.app !== "Little by Little" ||
+        !Array.isArray(backup.subjects) ||
+        !Array.isArray(backup.studyRecords)
+      ) {
+        throw new Error("Invalid backup");
+      }
+
+      if (!confirm("Restore this backup? Your current study data will be replaced.")) {
+        event.target.value = "";
+        return;
+      }
+
+      localStorage.setItem("subjects", JSON.stringify(backup.subjects));
+      localStorage.setItem("studyRecords", JSON.stringify(backup.studyRecords));
+
+      alert("Your progress has been restored! ♡");
+      location.reload();
+
+    } catch (error) {
+      alert("That backup file doesn't look valid. Your current data is safe.");
+    }
+  };
+
+  reader.readAsText(file);
+}
 renderSubjects();
 setMode("focus");
 renderStats();
