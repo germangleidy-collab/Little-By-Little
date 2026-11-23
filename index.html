@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,23 +13,46 @@ body{margin:0;font-family:"Trebuchet MS",sans-serif;background:linear-gradient(1
 body[data-theme="lavender"]{--pink:#aa98d5;--deep:#62527f;--pale:#eee9fb;--cream:#fbf9ff;--muted:#8879aa;--bg1:#eee9fb;--bg2:#fbf9ff;--line:#ded5f1}
 body[data-theme="sage"]{--pink:#91aa91;--deep:#4f6955;--pale:#e8f0e6;--cream:#fbfff9;--muted:#758e78;--bg1:#e8f0e6;--bg2:#fbfff9;--line:#d5e3d2}
 body[data-theme="midnight"]{--pink:#b69ad9;--deep:#eee5fa;--pale:#393047;--cream:#242031;--muted:#c2b1d9;--bg1:#211d2b;--bg2:#30283c;--card:rgba(48,40,60,.94);--line:#514460;color:var(--deep)}
-header{text-align:center;padding:25px 15px 10px}header h1{margin:0;font-size:2rem}header p{color:var(--muted);font-size:.9rem}
-main{max-width:900px;margin:auto;padding:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:19px;margin-bottom:15px;box-shadow:0 5px 18px #80546b12}
-h2{font-size:1.1rem;margin:0 0 14px}h3{font-size:.95rem;margin:14px 0 8px}label{display:block;font-size:.85rem;margin-bottom:6px}
+header{text-align:center;padding:25px 15px 10px}
+header h1{margin:0;font-size:2rem}
+header p{color:var(--muted);font-size:.9rem}
+main{max-width:900px;margin:auto;padding:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:19px;margin-bottom:15px;box-shadow:0 5px 18px #80546b12}
+h2{font-size:1.1rem;margin:0 0 14px}
+h3{font-size:.95rem;margin:14px 0 8px}
+label{display:block;font-size:.85rem;margin-bottom:6px}
 input,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--cream);color:var(--deep);font:inherit;margin-bottom:11px}
 button{border:0;border-radius:30px;padding:11px 17px;background:var(--pink);color:white;font-weight:bold;font-size:.88rem;cursor:pointer;margin:3px}
-button.secondary{background:var(--pale);color:var(--deep)}button:active{transform:scale(.98)}
-.settings{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.timer{text-align:center;padding:22px 10px}
-.phase{font-size:.85rem;letter-spacing:2px;color:var(--muted)}#clock{font-size:clamp(3.5rem,14vw,5.5rem);font-weight:bold;margin:10px 0}
-#progress{height:9px;background:var(--pale);border-radius:20px;overflow:hidden;margin:14px 0}#bar{height:100%;width:0;background:var(--pink);transition:width .3s}
-#message{min-height:25px;font-style:italic;color:var(--muted)}.buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:var(--pale);border-radius:16px;padding:13px}.stat strong{display:block;font-size:1.35rem;margin-top:5px}.stat small{color:var(--muted)}
-.subject-row{margin:12px 0}.subject-row>div:first-child{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}.track{height:8px;background:var(--pale);border-radius:20px;overflow:hidden}.fill{height:100%;background:var(--pink);border-radius:20px}
-#history{font-size:.9rem;line-height:1.8}.scene{min-height:110px;border-radius:17px;padding:18px;text-align:center;display:grid;place-items:center;background:linear-gradient(135deg,#f7dce8,#fff7f1);font-size:1.15rem;margin:10px 0}
-.scene[data-scene="garden"]{background:linear-gradient(135deg,#dcefdc,#f8f6df)}.scene[data-scene="rain"]{background:linear-gradient(135deg,#d8e4ef,#f2eefa)}.scene[data-scene="stars"]{background:linear-gradient(135deg,#29243f,#62527f);color:#fff}.scene[data-scene="candle"]{background:linear-gradient(135deg,#f2d6b8,#fff3df)}
+button.secondary{background:var(--pale);color:var(--deep)}
+button:active{transform:scale(.98)}
+.settings{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.timer{text-align:center;padding:22px 10px}
+.phase{font-size:.85rem;letter-spacing:2px;color:var(--muted)}
+#clock{font-size:clamp(3.5rem,14vw,5.5rem);font-weight:bold;margin:10px 0}
+#progress{height:9px;background:var(--pale);border-radius:20px;overflow:hidden;margin:14px 0}
+#bar{height:100%;width:0;background:var(--pink);transition:width .3s}
+#message{min-height:25px;font-style:italic;color:var(--muted)}
+.buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{background:var(--pale);border-radius:16px;padding:13px}
+.stat strong{display:block;font-size:1.35rem;margin-top:5px}
+.stat small{color:var(--muted)}
+.subject-row{margin:12px 0}
+.subject-row>div:first-child{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}
+.track{height:8px;background:var(--pale);border-radius:20px;overflow:hidden}
+.fill{height:100%;background:var(--pink);border-radius:20px}
+#history{font-size:.9rem;line-height:1.8}
+.scene{min-height:110px;border-radius:17px;padding:18px;text-align:center;display:grid;place-items:center;background:linear-gradient(135deg,#f7dce8,#fff7f1);font-size:1.15rem;margin:10px 0}
+.scene[data-scene="garden"]{background:linear-gradient(135deg,#dcefdc,#f8f6df)}
+.scene[data-scene="rain"]{background:linear-gradient(135deg,#d8e4ef,#f2eefa)}
+.scene[data-scene="stars"]{background:linear-gradient(135deg,#29243f,#62527f);color:#fff}
+.scene[data-scene="candle"]{background:linear-gradient(135deg,#f2d6b8,#fff3df)}
 .pill{display:inline-block;background:var(--pale);padding:6px 11px;border-radius:30px;font-size:.82rem;margin:3px}
-.store-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.store-item{border:1px solid var(--line);border-radius:15px;padding:12px;background:var(--cream)}
-.store-item strong{display:block;margin-bottom:5px}.muted{color:var(--muted);font-size:.85rem}.rowline{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.store-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.store-item{border:1px solid var(--line);border-radius:15px;padding:12px;background:var(--cream)}
+.store-item strong{display:block;margin-bottom:5px}
+.muted{color:var(--muted);font-size:.85rem}
+.rowline{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
 footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 @media(max-width:500px){main{padding:10px}.card{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.store-grid{grid-template-columns:1fr}}
 </style>
@@ -41,7 +65,6 @@ footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 <label for="subject">What are we working on today?</label><select id="subject"></select>
 <div class="rowline"><input id="newSubject" placeholder="Add a new subject..." style="flex:1;margin:0"><button onclick="addSubject()">Add</button></div>
 </section>
-
 <section class="card">
 <h2>🎀 Your focus space</h2>
 <div class="scene" id="scene" data-scene="garden"><div><div id="sceneEmoji" style="font-size:2rem">🌷🐈</div><div id="sceneText">A little garden to grow your focus.</div></div></div>
@@ -50,7 +73,6 @@ footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 <option value="garden">Flower garden 🌷</option><option value="rain">Rainy window 🌧️</option><option value="stars">Starry night ✨</option><option value="candle">Candlelit desk 🕯️</option>
 </select>
 </section>
-
 <section class="card">
 <h2>🎀 Customize your timer</h2>
 <div class="settings">
@@ -60,14 +82,12 @@ footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 <div><label for="cycles">Focus sessions</label><input id="cycles" type="number" min="1" max="20" value="4"></div>
 </div><button class="secondary" onclick="applySettings()">Apply settings ♡</button>
 </section>
-
 <section class="card timer">
 <div class="phase" id="phase">TIME TO FOCUS</div><div id="clock">25:00</div><div id="progress"><div id="bar"></div></div>
 <p id="cycleText">Focus session 1 of 4</p><p id="message">You've got this, sweetheart. ♡</p>
 <div class="buttons"><button id="startBtn" onclick="toggleTimer()">Start focusing ♡</button><button class="secondary" onclick="resetTimer()">↻ Reset</button></div>
 <p class="muted">You earn 1 coin for every full minute of focus time. Breaks don't earn coins.</p>
 </section>
-
 <section class="card">
 <h2>🪙 Your little rewards</h2>
 <div class="stats">
@@ -76,25 +96,21 @@ footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 <div class="stat"><small>ITEMS OWNED</small><strong id="ownedCount">0</strong></div>
 </div>
 </section>
-
 <section class="card">
 <h2>📊 Your weekly progress</h2>
 <div class="stats"><div class="stat"><small>FOCUS THIS WEEK</small><strong id="weeklyTime">0h 0m</strong></div><div class="stat"><small>COMPLETED SESSIONS</small><strong id="weeklySessions">0</strong></div></div>
 <h3>Time by subject ♡</h3><div id="subjectStats"></div>
 </section>
-
 <section class="card">
 <h2>🛍️ The little store</h2><p class="muted">Spend coins on cute decorations for your focus space. No real money, just rewards.</p>
 <div id="store" class="store-grid"></div>
 </section>
-
 <section class="card">
 <h2>🎨 Your app's look</h2>
 <label for="themeChoice">Choose a theme</label><select id="themeChoice" onchange="setTheme(this.value)">
 <option value="pink">Coquette pink</option><option value="lavender">Lavender</option><option value="sage">Sage garden</option><option value="midnight">Midnight</option>
 </select>
 </section>
-
 <section class="card">
 <h2>🎵 Sounds & atmosphere</h2>
 <label for="soundChoice">Focus sound</label><select id="soundChoice" onchange="setSound(this.value)">
@@ -104,11 +120,9 @@ footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 <p class="muted">Spotify and YouTube Music can be opened separately while your timer runs.</p>
 <div class="buttons"><button class="secondary" onclick="openMusic('spotify')">Open Spotify</button><button class="secondary" onclick="openMusic('youtube')">Open YouTube Music</button></div>
 </section>
-
 <section class="card">
 <h2>🌸 Your little accomplishments</h2><div id="history">Your completed sessions will appear here.</div>
 </section>
-
 <section class="card">
 <h2>🛡️ Protect your progress</h2><p class="muted">Download a copy of your subjects, study history, coins, and purchases.</p>
 <div class="buttons"><button onclick="downloadBackup()">Download backup ♡</button><button class="secondary" onclick="$('backupFile').click()">Restore backup</button></div>
@@ -117,7 +131,6 @@ footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
 </section>
 </main>
 <footer>Made with love, one little step at a time ♡</footer>
-
 <script>
 const $=id=>document.getElementById(id);
 const defaultSubjects=["Pulmonary Function Tests","Alternate Sites","Respiratory Pharmacology","Anatomy","Personal Projects"];
@@ -144,7 +157,7 @@ function setMode(m){mode=m;let s=getSettings();if(!s)return;totalSeconds=m==="fo
 function updateDisplay(){let mm=Math.floor(remaining/60),ss=remaining%60;$("clock").textContent=String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0");$("bar").style.width=(100*(1-remaining/totalSeconds))+"%";let s=getSettings();$("cycleText").textContent="Focus session "+cycle+" of "+(s?s.cycles:4);document.title=$("clock").textContent+" • Little by Little"}
 function toggleTimer(){if(running){stopTimer();return}running=true;$("startBtn").textContent="Pause ♡";interval=setInterval(tick,1000)}
 function stopTimer(){running=false;clearInterval(interval);interval=null;$("startBtn").textContent=mode==="focus"?"Continue ♡":"Continue"}
-function tick(){remaining=Math.max(0,remaining-1);if(mode==="focus"){focusElapsed++;let wholeMinutes=Math.floor(focusElapsed/60);if(wholeMinutes>coinsAwarded){let gained=wholeMinutes-coinsAwarded;coins+=gained;coinsAwarded=wholeMinutes;localStorage.setItem("lblCoins",coins);renderRewards()} }updateDisplay();if(remaining<=0)finishMode()}
+function tick(){remaining=Math.max(0,remaining-1);if(mode==="focus"){focusElapsed++;let wholeMinutes=Math.floor(focusElapsed/60);if(wholeMinutes>coinsAwarded){let gained=wholeMinutes-coinsAwarded;coins+=gained;coinsAwarded=wholeMinutes;localStorage.setItem("lblCoins",coins);renderRewards()}}updateDisplay();if(remaining<=0)finishMode()}
 function saveFocusRecord(){if(mode!=="focus"||focusElapsed<=0)return;let mins=focusElapsed/60;let last=records[records.length-1];if(last&&last._active===true){last.minutes=mins;last._active=false;last.coins=coinsAwarded}else{records.push({subject:$("subject").value,minutes:mins,date:new Date().toISOString(),type:"focus",coins:coinsAwarded})}localStorage.setItem("studyRecords",JSON.stringify(records));renderStats()}
 function finishMode(){stopTimer();if(mode==="focus"){saveFocusRecord();let s=getSettings();if(cycle>=s.cycles){$("message").textContent="You did it!! All your sessions are complete! 🎀";alert("You did it! Your study cycle is complete. I'm so proud of you! ♡");cycle=1;setMode("focus");$("startBtn").textContent="Start focusing ♡";return}alert("Focus session complete! Time for a break. 🌷");$("message").textContent="Beautiful work! Time to rest a little. ♡";setMode(cycle%4===0?"long":"short")}else{if(mode==="long")cycle=1;else cycle++;alert("Break is over! Let's get back to it. ♡");$("message").textContent="Break's over! Ready for another little step?";setMode("focus")}$("startBtn").textContent=mode==="focus"?"Start focusing ♡":"Start break ♡"}
 function resetTimer(){if(mode==="focus"&&focusElapsed>0)saveFocusRecord();stopTimer();cycle=1;setMode("focus");$("message").textContent="Fresh start! You've got this. ♡";$("startBtn").textContent="Start focusing ♡"}
