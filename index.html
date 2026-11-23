@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,36 +8,29 @@
 <style>
 :root{--pink:#d99bb5;--deep:#80546b;--pale:#f9eaf0;--cream:#fffaf9;--muted:#a77d90;--white:#fff;--bg1:#f8e7ee;--bg2:#fff9f7;--card:rgba(255,255,255,.88);--line:#f0dce5}
 *{box-sizing:border-box}
-body{margin:0;font-family:"Trebuchet 
-MS",sans-serif;background:linear-gradient(145deg,var(--bg1),var(--bg2));color:var(--deep);min-height:100vh;transition:background .3s,color .3s}
+body{margin:0;font-family:"Trebuchet MS",sans-serif;background:linear-gradient(145deg,var(--bg1),var(--bg2));color:var(--deep);min-height:100vh;transition:background .3s,color .3s}
 body[data-theme="lavender"]{--pink:#aa98d5;--deep:#62527f;--pale:#eee9fb;--cream:#fbf9ff;--muted:#8879aa;--bg1:#eee9fb;--bg2:#fbf9ff;--line:#ded5f1}
 body[data-theme="sage"]{--pink:#91aa91;--deep:#4f6955;--pale:#e8f0e6;--cream:#fbfff9;--muted:#758e78;--bg1:#e8f0e6;--bg2:#fbfff9;--line:#d5e3d2}
-body[data-theme="midnight"]{--pink:#b69ad9;--deep:#eee5fa;--pale:#393047;--cream:#242031;--muted:#c2b1d9;--bg1:#211d2b;--bg2:#30283c;--card:rgba(48,40,60,.94);--line:#51
-4460;color:var(--deep)}
+body[data-theme="midnight"]{--pink:#b69ad9;--deep:#eee5fa;--pale:#393047;--cream:#242031;--muted:#c2b1d9;--bg1:#211d2b;--bg2:#30283c;--card:rgba(48,40,60,.94);--line:#514460;color:var(--deep)}
 header{text-align:center;padding:25px 15px 10px}header h1{margin:0;font-size:2rem}header p{color:var(--muted);font-size:.9rem}
 main{max-width:900px;margin:auto;padding:14px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:19px;margin-bottom:15px;box-shadow:0 5px 18px #80546b12}
 h2{font-size:1.1rem;margin:0 0 14px}h3{font-size:.95rem;margin:14px 0 8px}label{display:block;font-size:.85rem;margin-bottom:6px}
-input,select{width:100%;padding:1
-1px;border:1px solid var(--line);border-radius:12px;background:var(--cream);color:var(--deep);font:inherit;margin-bottom:11px}
+input,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--cream);color:var(--deep);font:inherit;margin-bottom:11px}
 button{border:0;border-radius:30px;padding:11px 17px;background:var(--pink);color:white;font-weight:bold;font-size:.88rem;cursor:pointer;margin:3px}
 button.secondary{background:var(--pale);color:var(--deep)}button:active{transform:scale(.98)}
-.settings{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.timer{text-align:center;padding:22px 
-10px}
+.settings{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.timer{text-align:center;padding:22px 10px}
 .phase{font-size:.85rem;letter-spacing:2px;color:var(--muted)}#clock{font-size:clamp(3.5rem,14vw,5.5rem);font-weight:bold;margin:10px 0}
 #progress{height:9px;background:var(--pale);border-radius:20px;overflow:hidden;margin:14px 0}#bar{height:100%;width:0;background:var(--pink);transition:width .3s}
 #message{min-height:25px;font-style:italic;color:var(--muted)}.buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:var(--pale);border-ra
-dius:16px;padding:13px}.stat strong{display:block;font-size:1.35rem;margin-top:5px}.stat small{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{background:var(--pale);border-radius:16px;padding:13px}.stat strong{display:block;font-size:1.35rem;margin-top:5px}.stat small{color:var(--muted)}
 .subject-row{margin:12px 0}.subject-row>div:first-child{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}.track{height:8px;background:var(--pale);border-radius:20px;overflow:hidden}.fill{height:100%;background:var(--pink);border-radius:20px}
-#history{font-size:.9rem;line-height:1.8}.scene{min-height:110px;border-radius:17px;padding:18px;text-align:center;display:grid;place-items:center;background:linear-gradient(135deg,#f7dce8,#fff7f1);fo
-nt-size:1.15rem;margin:10px 0}
+#history{font-size:.9rem;line-height:1.8}.scene{min-height:110px;border-radius:17px;padding:18px;text-align:center;display:grid;place-items:center;background:linear-gradient(135deg,#f7dce8,#fff7f1);font-size:1.15rem;margin:10px 0}
 .scene[data-scene="garden"]{background:linear-gradient(135deg,#dcefdc,#f8f6df)}.scene[data-scene="rain"]{background:linear-gradient(135deg,#d8e4ef,#f2eefa)}.scene[data-scene="stars"]{background:linear-gradient(135deg,#29243f,#62527f);color:#fff}.scene[data-scene="candle"]{background:linear-gradient(135deg,#f2d6b8,#fff3df)}
 .pill{display:inline-block;background:var(--pale);padding:6px 11px;border-radius:30px;font-size:.82rem;margin:3px}
 .store-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.store-item{border:1px solid var(--line);border-radius:15px;padding:12px;background:var(--cream)}
 .store-item strong{display:block;margin-bottom:5px}.muted{color:var(--muted);font-size:.85rem}.rowline{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
 footer{text-align:center;padding:18px;color:var(--muted);font-size:.8rem}
-@media(max-width:500px){main{padding:10px}.card{padding:16px}.stats{grid-template-columns:
-repeat(2,1fr)}.store-grid{grid-template-columns:1fr}}
+@media(max-width:500px){main{padding:10px}.card{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.store-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body data-theme="pink">
@@ -55,8 +47,7 @@ repeat(2,1fr)}.store-grid{grid-template-columns:1fr}}
 <div class="scene" id="scene" data-scene="garden"><div><div id="sceneEmoji" style="font-size:2rem">🌷🐈</div><div id="sceneText">A little garden to grow your focus.</div></div></div>
 <label for="sceneChoice">Choose your focus scene</label>
 <select id="sceneChoice" onchange="setScene(this.value)">
-<option value="garden">Flower garden 🌷</option><option value="rain">Rainy window 🌧️</option><option value="stars">Starry night ✨</option><option value="candle">Candlelit desk 
-🕯️</option>
+<option value="garden">Flower garden 🌷</option><option value="rain">Rainy window 🌧️</option><option value="stars">Starry night ✨</option><option value="candle">Candlelit desk 🕯️</option>
 </select>
 </section>
 
@@ -65,8 +56,7 @@ repeat(2,1fr)}.store-grid{grid-template-columns:1fr}}
 <div class="settings">
 <div><label for="focusLength">Focus (minutes)</label><input id="focusLength" type="number" min="1" max="180" value="25"></div>
 <div><label for="shortLength">Short break</label><input id="shortLength" type="number" min="1" max="60" value="5"></div>
-<div><label for="longLength">Long break</label><input id="longLength" type="number" min="1" max="90" 
-value="15"></div>
+<div><label for="longLength">Long break</label><input id="longLength" type="number" min="1" max="90" value="15"></div>
 <div><label for="cycles">Focus sessions</label><input id="cycles" type="number" min="1" max="20" value="4"></div>
 </div><button class="secondary" onclick="applySettings()">Apply settings ♡</button>
 </section>
@@ -74,8 +64,7 @@ value="15"></div>
 <section class="card timer">
 <div class="phase" id="phase">TIME TO FOCUS</div><div id="clock">25:00</div><div id="progress"><div id="bar"></div></div>
 <p id="cycleText">Focus session 1 of 4</p><p id="message">You've got this, sweetheart. ♡</p>
-<div class="buttons"><button id="startBtn" 
-onclick="toggleTimer()">Start focusing ♡</button><button class="secondary" onclick="resetTimer()">↻ Reset</button></div>
+<div class="buttons"><button id="startBtn" onclick="toggleTimer()">Start focusing ♡</button><button class="secondary" onclick="resetTimer()">↻ Reset</button></div>
 <p class="muted">You earn 1 coin for every full minute of focus time. Breaks don't earn coins.</p>
 </section>
 
@@ -102,21 +91,18 @@ onclick="toggleTimer()">Start focusing ♡</button><button class="secondary" onc
 <section class="card">
 <h2>🎨 Your app's look</h2>
 <label for="themeChoice">Choose a theme</label><select id="themeChoice" onchange="setTheme(this.value)">
-<option value="pink">Coquette pink</option><option 
-value="lavender">Lavender</option><option value="sage">Sage garden</option><option value="midnight">Midnight</option>
+<option value="pink">Coquette pink</option><option value="lavender">Lavender</option><option value="sage">Sage garden</option><option value="midnight">Midnight</option>
 </select>
 </section>
 
 <section class="card">
 <h2>🎵 Sounds & atmosphere</h2>
 <label for="soundChoice">Focus sound</label><select id="soundChoice" onchange="setSound(this.value)">
-<option value="none">No sound</option><option value="tick">Clock ticking (gentle)</option><option value="piano">Soft piano tones</option><option 
-value="fire">Fireplace-style ambience</option>
+<option value="none">No sound</option><option value="tick">Clock ticking (gentle)</option><option value="piano">Soft piano tones</option><option value="fire">Fireplace-style ambience</option>
 </select>
 <div class="rowline"><button class="secondary" onclick="toggleSound()">Play / stop sound</button><span id="soundStatus" class="muted">Sound off</span></div>
 <p class="muted">Spotify and YouTube Music can be opened separately while your timer runs.</p>
-<div class="buttons"><button class="secondary" onclick="openMusic('spotify')">Open Spotify</button><button class="secondary" onclick="openMusic('youtube')">O
-pen YouTube Music</button></div>
+<div class="buttons"><button class="secondary" onclick="openMusic('spotify')">Open Spotify</button><button class="secondary" onclick="openMusic('youtube')">Open YouTube Music</button></div>
 </section>
 
 <section class="card">
@@ -125,8 +111,7 @@ pen YouTube Music</button></div>
 
 <section class="card">
 <h2>🛡️ Protect your progress</h2><p class="muted">Download a copy of your subjects, study history, coins, and purchases.</p>
-<div class="buttons"><button onclick="downloadBackup()">Download backup ♡</button><button 
-class="secondary" onclick="$('backupFile').click()">Restore backup</button></div>
+<div class="buttons"><button onclick="downloadBackup()">Download backup ♡</button><button class="secondary" onclick="$('backupFile').click()">Restore backup</button></div>
 <input id="backupFile" type="file" accept=".json,application/json" style="display:none" onchange="restoreBackup(event)">
 <p id="backupMessage" class="muted"></p>
 </section>
@@ -135,13 +120,11 @@ class="secondary" onclick="$('backupFile').click()">Restore backup</button></div
 
 <script>
 const $=id=>document.getElementById(id);
-const defaultSubjects=["Pulmonary Function Tests","Alternate 
-Sites","Respiratory Pharmacology","Anatomy","Personal Projects"];
+const defaultSubjects=["Pulmonary Function Tests","Alternate Sites","Respiratory Pharmacology","Anatomy","Personal Projects"];
 const messages=["You've got this, sweetheart. ♡","One thing at a time. You're doing great!","Keep going! Your effort matters.","Don't worry about perfection. Just keep trying.","Look at you showing up for yourself!","Take a breath. You're exactly where you need to be.","You're capable of more than you think. ♡","Little by little, you're getting there."];
 const catalog=[
 {id:"cat",name:"Sleepy study cat",emoji:"🐈",price:20,kind:"scene"},
-{id:"sparkles",name:"Extra sparkles",emoji:"✨",price:15,kind:"
-decoration"},
+{id:"sparkles",name:"Extra sparkles",emoji:"✨",price:15,kind:"decoration"},
 {id:"tulips",name:"Tulip bouquet",emoji:"🌷",price:25,kind:"decoration"},
 {id:"moon",name:"Moon charm",emoji:"🌙",price:30,kind:"decoration"},
 {id:"cloud",name:"Cloud cushion",emoji:"☁️",price:18,kind:"decoration"}
@@ -153,49 +136,32 @@ let mode="focus",cycle=1,running=false,interval=null,remaining=1500,totalSeconds
 let audioCtx=null,soundTimer=null,soundOn=false;
 function read(key,fallback){try{const x=JSON.parse(localStorage.getItem(key));return x??fallback}catch(e){return fallback}}
 function saveSubjects(){localStorage.setItem("subjects",JSON.stringify(subjects))}
-function renderSubjects(){const 
-selected=$("subject").value;$("subject").innerHTML="";subjects.forEach(s=>{let o=document.createElement("option");o.value=s;o.textContent=s;$("subject").appendChild(o)});if(subjects.includes(selected))$("subject").value=selected}
+function renderSubjects(){const selected=$("subject").value;$("subject").innerHTML="";subjects.forEach(s=>{let o=document.createElement("option");o.value=s;o.textContent=s;$("subject").appendChild(o)});if(subjects.includes(selected))$("subject").value=selected}
 function addSubject(){let n=$("newSubject").value.trim();if(!n)return;if(subjects.includes(n)){alert("That subject already exists!");return}subjects.push(n);saveSubjects();renderSubjects();$("subject").value=n;$("newSubject").value=""}
-function getSettings(){let focus=+$("focusLength").value,short=+$("shortLength").value,long=+$("longLength").value,cycles=+$("cycles").value;if(![focus,short,long
-,cycles].every(Number.isInteger)||focus<1||focus>180||short<1||short>60||long<1||long>90||cycles<1||cycles>20){alert("Please enter valid whole numbers within the allowed ranges.");return null}return{focus,short,long,cycles}}
+function getSettings(){let focus=+$("focusLength").value,short=+$("shortLength").value,long=+$("longLength").value,cycles=+$("cycles").value;if(![focus,short,long,cycles].every(Number.isInteger)||focus<1||focus>180||short<1||short>60||long<1||long>90||cycles<1||cycles>20){alert("Please enter valid whole numbers within the allowed ranges.");return null}return{focus,short,long,cycles}}
 function applySettings(){if(running){alert("Pause your timer before changing settings.");return}let s=getSettings();if(!s)return;cycle=1;setMode("focus")}
-function setMode(m){mode=m;let s=getSettings();if(!s)return;totalSeconds=m==="focus"?s.focus*60:m==="short"?s.short*60:s.long*60;remaining=totalSeconds;focusElapsed=0;coinsAwarded=0;$("phase").textC
-ontent=m==="focus"?"TIME TO FOCUS":m==="short"?"SHORT BREAK ♡":"LONG BREAK 🌷";updateDisplay()}
+function setMode(m){mode=m;let s=getSettings();if(!s)return;totalSeconds=m==="focus"?s.focus*60:m==="short"?s.short*60:s.long*60;remaining=totalSeconds;focusElapsed=0;coinsAwarded=0;$("phase").textContent=m==="focus"?"TIME TO FOCUS":m==="short"?"SHORT BREAK ♡":"LONG BREAK 🌷";updateDisplay()}
 function updateDisplay(){let mm=Math.floor(remaining/60),ss=remaining%60;$("clock").textContent=String(mm).padStart(2,"0")+":"+String(ss).padStart(2,"0");$("bar").style.width=(100*(1-remaining/totalSeconds))+"%";let s=getSettings();$("cycleText").textContent="Focus session "+cycle+" of "+(s?s.cycles:4);document.title=$("clock").textContent+" • Little by Little"}
-function toggleTimer(){if(running){stopTimer();return}running=true;
-$("startBtn").textContent="Pause ♡";interval=setInterval(tick,1000)}
+function toggleTimer(){if(running){stopTimer();return}running=true;$("startBtn").textContent="Pause ♡";interval=setInterval(tick,1000)}
 function stopTimer(){running=false;clearInterval(interval);interval=null;$("startBtn").textContent=mode==="focus"?"Continue ♡":"Continue"}
 function tick(){remaining=Math.max(0,remaining-1);if(mode==="focus"){focusElapsed++;let wholeMinutes=Math.floor(focusElapsed/60);if(wholeMinutes>coinsAwarded){let gained=wholeMinutes-coinsAwarded;coins+=gained;coinsAwarded=wholeMinutes;localStorage.setItem("lblCoins",coins);renderRewards()} }updateDisplay();if(remaining<=0)finishMode()}
 function saveFocusRecord(){if(mode!=="focus"||focusElapsed<=0)return;let mins=focusElapsed/60;let last=records[records.length-1];if(last&&last._active===true){last.minutes=mins;last._active=false;last.coins=coinsAwarded}else{records.push({subject:$("subject").value,minutes:mins,date:new Date().toISOString(),type:"focus",coins:coinsAwarded})}localStorage.setItem("studyRecords",JSON.stringify(records));renderStats()}
-function finishMode(){stopTimer();if(mode==="focus"){saveFocusRecord();let s=getSettings();if(cycle>=s.cycles){$("message").textContent="You did 
-it!! All your sessions are complete! 🎀";alert("You did it! Your study cycle is complete. I'm so proud of you! ♡");cycle=1;setMode("focus");$("startBtn").textContent="Start focusing ♡";return}alert("Focus session complete! Time for a break. 🌷");$("message").textContent="Beautiful work! Time to rest a little. ♡";setMode(cycle%4===0?"long":"short")}else{if(mode==="long")cycle=1;else cycle++;alert("Break is over! Let's get back to it. ♡");$("message").textContent="Break's over! Ready for another little step?";setMode("focus")}$("startBtn").textContent=mode==="focus"?"Start focusing ♡":"Start 
-break ♡"}
+function finishMode(){stopTimer();if(mode==="focus"){saveFocusRecord();let s=getSettings();if(cycle>=s.cycles){$("message").textContent="You did it!! All your sessions are complete! 🎀";alert("You did it! Your study cycle is complete. I'm so proud of you! ♡");cycle=1;setMode("focus");$("startBtn").textContent="Start focusing ♡";return}alert("Focus session complete! Time for a break. 🌷");$("message").textContent="Beautiful work! Time to rest a little. ♡";setMode(cycle%4===0?"long":"short")}else{if(mode==="long")cycle=1;else cycle++;alert("Break is over! Let's get back to it. ♡");$("message").textContent="Break's over! Ready for another little step?";setMode("focus")}$("startBtn").textContent=mode==="focus"?"Start focusing ♡":"Start break ♡"}
 function resetTimer(){if(mode==="focus"&&focusElapsed>0)saveFocusRecord();stopTimer();cycle=1;setMode("focus");$("message").textContent="Fresh start! You've got this. ♡";$("startBtn").textContent="Start focusing ♡"}
-function renderStats(){let now=new Date(),monday=new Date(now);monday.setHours(0,0,0,0);monday.setDate(now.getDate()-((now.getDay()+6)%7));let weekly=records.filter(r=>r.type==="focus"&&new Date(r.date)>=monday),mins=weekly.reduce((a,r)=>a+(Number(r.minutes)||0),0);$("weeklyTime").textConten
-t=Math.floor(mins/60)+"h "+Math.round(mins%60)+"m";$("weeklySessions").textContent=weekly.length;let totals={};records.filter(r=>r.type==="focus").forEach(r=>totals[r.subject]=(totals[r.subject]||0)+(Number(r.minutes)||0));let max=Math.max(1,...Object.values(totals));$("subjectStats").innerHTML="";Object.entries(totals).sort((a,b)=>b[1]-a[1]).forEach(([n,v])=>{let row=document.createElement("div");row.className="subject-row";let top=document.createElement("div"),a=document.createElement("span"),b=document.createElement("span");a.textContent=n;b.textContent=Math.floor(v/60)+"h "+Math.round(v%60)+"m";top.append(a,b);let 
-track=document.createElement("div");track.className="track";let fill=document.createElement("div");fill.className="fill";fill.style.width=(v/max*100)+"%";track.append(fill);row.append(top,track);$("subjectStats").append(row)});if(!Object.keys(totals).length)$("subjectStats").textContent="Your subjects will show up here after your first focus session. ♡";$("history").textContent=records.length?records.length+" little accomplishments saved. Keep it up! ♡":"Your completed sessions will appear here."}
-function renderRewards(){let total=records.reduce((a,r)=>a+(Number(r.minutes)||0),0);$
-("coinCount").textContent=coins;$("allTime").textContent=Math.floor(total)+"m";$("ownedCount").textContent=owned.length}
-function renderStore(){$("store").innerHTML="";catalog.forEach(item=>{let div=document.createElement("div");div.className="store-item";let has=owned.includes(item.id);div.innerHTML="<strong>"+item.emoji+" "+item.name+"</strong><span class='muted'>"+(has?"Owned":item.price+" coins")+"</span><div><button "+(has?"disabled":"")+" onclick=\"buyItem('"+item.id+"')\">"+(has?"Purchased":"Buy")+"</button></div>";$
-("store").append(div)})}
+function renderStats(){let now=new Date(),monday=new Date(now);monday.setHours(0,0,0,0);monday.setDate(now.getDate()-((now.getDay()+6)%7));let weekly=records.filter(r=>r.type==="focus"&&new Date(r.date)>=monday),mins=weekly.reduce((a,r)=>a+(Number(r.minutes)||0),0);$("weeklyTime").textContent=Math.floor(mins/60)+"h "+Math.round(mins%60)+"m";$("weeklySessions").textContent=weekly.length;let totals={};records.filter(r=>r.type==="focus").forEach(r=>totals[r.subject]=(totals[r.subject]||0)+(Number(r.minutes)||0));let max=Math.max(1,...Object.values(totals));$("subjectStats").innerHTML="";Object.entries(totals).sort((a,b)=>b[1]-a[1]).forEach(([n,v])=>{let row=document.createElement("div");row.className="subject-row";let top=document.createElement("div"),a=document.createElement("span"),b=document.createElement("span");a.textContent=n;b.textContent=Math.floor(v/60)+"h "+Math.round(v%60)+"m";top.append(a,b);let track=document.createElement("div");track.className="track";let fill=document.createElement("div");fill.className="fill";fill.style.width=(v/max*100)+"%";track.append(fill);row.append(top,track);$("subjectStats").append(row)});if(!Object.keys(totals).length)$("subjectStats").textContent="Your subjects will show up here after your first focus session. ♡";$("history").textContent=records.length?records.length+" little accomplishments saved. Keep it up! ♡":"Your completed sessions will appear here."}
+function renderRewards(){let total=records.reduce((a,r)=>a+(Number(r.minutes)||0),0);$("coinCount").textContent=coins;$("allTime").textContent=Math.floor(total)+"m";$("ownedCount").textContent=owned.length}
+function renderStore(){$("store").innerHTML="";catalog.forEach(item=>{let div=document.createElement("div");div.className="store-item";let has=owned.includes(item.id);div.innerHTML="<strong>"+item.emoji+" "+item.name+"</strong><span class='muted'>"+(has?"Owned":item.price+" coins")+"</span><div><button "+(has?"disabled":"")+" onclick=\"buyItem('"+item.id+"')\">"+(has?"Purchased":"Buy")+"</button></div>";$("store").append(div)})}
 function buyItem(id){let item=catalog.find(x=>x.id===id);if(!item||owned.includes(id))return;if(coins<item.price){alert("You need "+(item.price-coins)+" more coins. Keep going! ♡");return}coins-=item.price;owned.push(id);localStorage.setItem("lblCoins",coins);localStorage.setItem("lblOwned",JSON.stringify(owned));renderStore();renderRewards();if(id==="cat")$("sceneEmoji").textContent="🐈🌷"}
 function setTheme(t){theme=t;document.body.dataset.theme=t;localStorage.setItem("lblTheme",t)}
-function setScene(s){scene=s;localStorage.setItem("lblScene",s);$("scene").dataset.scene=s;let 
-data={garden:["🌷🐈","A little garden to grow your focus."],rain:["🌧️📖","A cozy rainy-day study nook."],stars:["🌙✨","A quiet night under the stars."],candle:["🕯️📚","A warm, candlelit study desk."]};$("sceneEmoji").textContent=data[s][0];$("sceneText").textContent=data[s][1];if(owned.includes("cat"))$("sceneEmoji").textContent+=" 🐈"}
-function downloadBackup(){let data={app:"Little by Little",version:2,subjects,studyRecords:records,coins,owned,theme,scene,exportedAt:new Date().toISOString()};let blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.c
-reateObjectURL(blob),a=document.createElement("a");a.href=url;a.download="little-by-little-backup.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$("backupMessage").textContent="Backup prepared. Save the JSON file somewhere safe. ♡"}
-function restoreBackup(e){let file=e.target.files[0];if(!file)return;let reader=new FileReader();reader.onload=()=>{try{let b=JSON.parse(reader.result);if(b.app!=="Little by Little"||!Array.isArray(b.subjects)||!Array.isArray(b.studyRecords))throw Error();if(!confirm("Restore this backup? It will replace 
-the current subjects, history, coins, and cosmetics.")){e.target.value="";return}subjects=b.subjects;records=b.studyRecords;coins=Number(b.coins)||0;owned=Array.isArray(b.owned)?b.owned:[];localStorage.setItem("subjects",JSON.stringify(subjects));localStorage.setItem("studyRecords",JSON.stringify(records));localStorage.setItem("lblCoins",coins);localStorage.setItem("lblOwned",JSON.stringify(owned));if(b.theme)setTheme(b.theme);if(b.scene)setScene(b.scene);renderSubjects();renderStats();renderRewards();renderStore();alert("Your progress has been restored! ♡")}catch(err){alert("That backup file isn't valid. Your current data was 
-not changed.")}e.target.value=""};reader.readAsText(file)}
+function setScene(s){scene=s;localStorage.setItem("lblScene",s);$("scene").dataset.scene=s;let data={garden:["🌷🐈","A little garden to grow your focus."],rain:["🌧️📖","A cozy rainy-day study nook."],stars:["🌙✨","A quiet night under the stars."],candle:["🕯️📚","A warm, candlelit study desk."]};$("sceneEmoji").textContent=data[s][0];$("sceneText").textContent=data[s][1];if(owned.includes("cat"))$("sceneEmoji").textContent+=" 🐈"}
+function downloadBackup(){let data={app:"Little by Little",version:2,subjects,studyRecords:records,coins,owned,theme,scene,exportedAt:new Date().toISOString()};let blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="little-by-little-backup.json";document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);$("backupMessage").textContent="Backup prepared. Save the JSON file somewhere safe. ♡"}
+function restoreBackup(e){let file=e.target.files[0];if(!file)return;let reader=new FileReader();reader.onload=()=>{try{let b=JSON.parse(reader.result);if(b.app!=="Little by Little"||!Array.isArray(b.subjects)||!Array.isArray(b.studyRecords))throw Error();if(!confirm("Restore this backup? It will replace the current subjects, history, coins, and cosmetics.")){e.target.value="";return}subjects=b.subjects;records=b.studyRecords;coins=Number(b.coins)||0;owned=Array.isArray(b.owned)?b.owned:[];localStorage.setItem("subjects",JSON.stringify(subjects));localStorage.setItem("studyRecords",JSON.stringify(records));localStorage.setItem("lblCoins",coins);localStorage.setItem("lblOwned",JSON.stringify(owned));if(b.theme)setTheme(b.theme);if(b.scene)setScene(b.scene);renderSubjects();renderStats();renderRewards();renderStore();alert("Your progress has been restored! ♡")}catch(err){alert("That backup file isn't valid. Your current data was not changed.")}e.target.value=""};reader.readAsText(file)}
 function openMusic(which){let url=which==="spotify"?"https://open.spotify.com/":"https://music.youtube.com/";window.open(url,"_blank")}
 function setSound(s){localStorage.setItem("lblSound",s);$("soundStatus").textContent=s==="none"?"Sound off":"Selected: "+s}
-function toggleSound(){let s=$("soundChoice").value;if(s==="none"){stopSound();return}if(soundOn){stopSound();return}try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)
-();soundOn=true;$("soundStatus").textContent="Sound playing: "+s;if(s==="tick"){soundTimer=setInterval(()=>tone(900,.025),1000)}else if(s==="piano"){let notes=[261.63,329.63,392,329.63];let i=0;soundTimer=setInterval(()=>tone(notes[i++%notes.length],.35),650)}else{soundTimer=setInterval(()=>{tone(110,.18);setTimeout(()=>tone(145,.12),180)},900)}}catch(e){$("soundStatus").textContent="Sound unavailable in this browser"}}
-function tone(freq,duration){if(!audioCtx)return;let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type="sine";o.frequency.value=freq;g.gain.setValueAtTime(.0001,au
-dioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.045,audioCtx.currentTime+.02);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+duration);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+duration+.03)}
+function toggleSound(){let s=$("soundChoice").value;if(s==="none"){stopSound();return}if(soundOn){stopSound();return}try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();soundOn=true;$("soundStatus").textContent="Sound playing: "+s;if(s==="tick"){soundTimer=setInterval(()=>tone(900,.025),1000)}else if(s==="piano"){let notes=[261.63,329.63,392,329.63];let i=0;soundTimer=setInterval(()=>tone(notes[i++%notes.length],.35),650)}else{soundTimer=setInterval(()=>{tone(110,.18);setTimeout(()=>tone(145,.12),180)},900)}}catch(e){$("soundStatus").textContent="Sound unavailable in this browser"}}
+function tone(freq,duration){if(!audioCtx)return;let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type="sine";o.frequency.value=freq;g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.045,audioCtx.currentTime+.02);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+duration);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+duration+.03)}
 function stopSound(){clearInterval(soundTimer);soundTimer=null;soundOn=false;$("soundStatus").textContent="Sound off"}
-renderSubjects();setTheme(theme);$("themeChoice").value=theme;setScene(scene);$("sceneChoice").value=scene;$("soundChoice").value=localStorage.getItem("lblSound")||"none";setM
-ode("focus");renderStats();renderRewards();renderStore();
+renderSubjects();setTheme(theme);$("themeChoice").value=theme;setScene(scene);$("sceneChoice").value=scene;$("soundChoice").value=localStorage.getItem("lblSound")||"none";setMode("focus");renderStats();renderRewards();renderStore();
 </script>
 </body>
 </html>
